@@ -12,12 +12,12 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true,
   },
   build: {
     outDir: 'dist',
     sourcemap: false,
     rollupOptions: {
+      input: path.resolve(__dirname, 'index.html'),
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
